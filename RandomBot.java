@@ -7,8 +7,9 @@ class RandomBot implements P4Player {
 		_p = p;
 	}
 	public int play() {
+		int res;
 		Random r = new Random();
-		int res = r.nextInt(Puissance4.WIDTH);
+		res = r.nextInt(Puissance4.WIDTH);
 		while(!_p.isFree(res))
 			res = r.nextInt(Puissance4.WIDTH);
 		return res;
